@@ -604,8 +604,8 @@ export default function Home() {
             </div>
 
             {/* Grid + detail */}
-            <div style={{display:"grid",gridTemplateColumns:active?"1fr 400px":"repeat(auto-fill,minmax(280px,1fr))",gap:18,alignItems:"start"}}>
-              <div style={{display:"grid",gridTemplateColumns:active?"1fr":"inherit",gap:"inherit"}}>
+            <div style={{display:"flex",gap:18,alignItems:"start"}}>
+              <div style={{flex:1,display:"grid",gridTemplateColumns:active?"1fr":"repeat(auto-fill,minmax(280px,1fr))",gap:18}}>
                 {results.length===0 ? (
                   <div className="glass" style={{padding:48,textAlign:"center",gridColumn:"1/-1"}}>
                     <div style={{fontSize:36,marginBottom:12}}>🔍</div>
@@ -616,7 +616,11 @@ export default function Home() {
                   <VideoCard key={v.id} v={v} active={active?.id===v.id} onClick={()=>setActive(active?.id===v.id?null:v)}/>
                 ))}
               </div>
-              {active && <DetailPanel v={active} onClose={()=>setActive(null)}/>}
+              {active && (
+                <div style={{width:420,flexShrink:0,position:"sticky",top:24}}>
+                  <DetailPanel v={active} onClose={()=>setActive(null)}/>
+                </div>
+              )}
             </div>
           </>
         ) : (
