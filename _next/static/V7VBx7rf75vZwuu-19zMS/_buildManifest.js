@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/oracle-demo//_next/:path+",
+        "destination": "/oracle-demo/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
