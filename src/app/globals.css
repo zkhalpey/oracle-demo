@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #0C2452;
+  --deep-blue: #0B67BE;
+  --crimson: #CE302C;
+  --light-blue: #A5D3E9;
+  --navy-light: #0D2D5E;
+  --glass-bg: rgba(11, 103, 190, 0.15);
+  --glass-border: rgba(165, 211, 233, 0.2);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--navy);
+  color: white;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+/* Glass card */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
+/* Glow effects */
+.glow-blue { box-shadow: 0 0 24px rgba(11,103,190,0.4), 0 4px 16px rgba(0,0,0,0.4); }
+.glow-crimson { box-shadow: 0 0 24px rgba(206,48,44,0.4), 0 4px 16px rgba(0,0,0,0.4); }
+
+/* Search input */
+.search-input {
+  background: rgba(12,36,82,0.8);
+  border: 1px solid var(--deep-blue);
+  color: white;
+  border-radius: 12px;
+  padding: 16px 20px 16px 52px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s;
+}
+.search-input:focus { border-color: var(--light-blue); box-shadow: 0 0 0 3px rgba(165,211,233,0.15); }
+.search-input::placeholder { color: rgba(165,211,233,0.5); }
+
+/* Video card hover */
+.video-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(11,103,190,0.5);
+}
+
+/* Anatomy tag */
+.anatomy-tag {
+  background: rgba(11,103,190,0.3);
+  border: 1px solid rgba(165,211,233,0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--light-blue);
+}
+.anatomy-tag.crimson { background: rgba(206,48,44,0.2); border-color: rgba(206,48,44,0.4); color: #f87171; }
+
+/* Timestamp pill */
+.timestamp { 
+  background: var(--crimson); 
+  color: white; 
+  border-radius: 6px; 
+  padding: 2px 8px; 
+  font-size: 12px; 
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shumway bubble */
+.shumway-bubble {
+  background: linear-gradient(135deg, rgba(11,103,190,0.25), rgba(12,36,82,0.8));
+  border: 1px solid rgba(165,211,233,0.25);
+  border-radius: 16px 16px 16px 4px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--deep-blue); border-radius: 3px; }
+
+/* Chapter badge */
+.chapter-badge {
+  background: linear-gradient(135deg, var(--deep-blue), rgba(11,103,190,0.6));
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(165,211,233,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.chapter-badge:hover, .chapter-badge.active { 
+  background: var(--crimson); 
+  border-color: var(--crimson);
+  box-shadow: 0 0 16px rgba(206,48,44,0.4);
+}
+
+/* Pulse animation for live indicator */
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+.pulse { animation: pulse 2s infinite; }
+
+/* Typing cursor */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.cursor { animation: blink 1s infinite; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--light-blue), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
