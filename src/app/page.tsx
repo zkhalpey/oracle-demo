@@ -543,7 +543,7 @@ export default function Home() {
           <div style={{display:"flex",alignItems:"center",gap:12}}>
             <span className="pulse" style={{width:7,height:7,borderRadius:"50%",background:"#22c55e",display:"inline-block"}}/>
             <span style={{fontSize:12,color:C.muted}}>AI Search Live</span>
-            <div style={{background:"rgba(206,48,44,0.12)",border:"1px solid rgba(206,48,44,0.35)",borderRadius:20,padding:"4px 12px",fontSize:11,fontWeight:700,color:"#f87171"}}>DEMO · ASU Khalpey AI Lab</div>
+            <div style={{background:"rgba(206,48,44,0.12)",border:"1px solid rgba(206,48,44,0.35)",borderRadius:20,padding:"4px 12px",fontSize:11,fontWeight:700,color:"#f87171"}}>DEMO · Khalpey AI Lab</div>
           </div>
         </div>
       </header>
@@ -551,7 +551,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <div style={{borderBottom:"1px solid rgba(11,103,190,0.15)",padding:"36px 24px 28px",background:"linear-gradient(180deg,rgba(11,103,190,0.06) 0%,transparent 100%)"}}>
         <div style={{maxWidth:1380,margin:"0 auto",textAlign:"center"}}>
-          <div style={{fontSize:11,fontWeight:800,letterSpacing:3,color:C.crimson,marginBottom:12}}>KHALPEY AI LAB · ASU · CTSNET ATLAS PARTNERSHIP DEMO</div>
+          <div style={{fontSize:11,fontWeight:800,letterSpacing:3,color:C.crimson,marginBottom:12}}>KHALPEY AI LAB · ATARI AI LLC · CTSNET ATLAS PARTNERSHIP DEMO</div>
           <h1 className="hero-title">
             <span className="or-red">OR</span><span className="or-white">acle</span>
             <br/>
@@ -629,7 +629,7 @@ export default function Home() {
         <div style={{maxWidth:1380,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:10}}>
           <div style={{fontSize:12,color:C.muted}}>
             <span style={{color:C.crimson,fontWeight:900}}>OR</span><span style={{color:C.white,fontWeight:900}}>acle</span>
-            <span style={{marginLeft:12}}>· Khalpey AI Lab · ASU · Built for CTSNet Partnership Pitch</span>
+            <span style={{marginLeft:12}}>· Khalpey AI Lab · ATARI AI LLC · Built for CTSNet Partnership</span>
           </div>
           <div style={{fontSize:11,color:"rgba(165,211,233,0.4)"}}>Dr. Zain Khalpey MD PhD FACS · zain@khalpey.ai · khalpey.ai</div>
         </div>
