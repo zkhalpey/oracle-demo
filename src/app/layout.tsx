@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ORacle — Surgical Video Intelligence",
+  title: "ORacle: Surgical Video Intelligence",
   description: "The Operating System for Surgical Judgment. AI-powered search and interactive tutor for the CTSNet Atlas of Cardiac Surgery.",
   openGraph: {
     title: "ORacle",

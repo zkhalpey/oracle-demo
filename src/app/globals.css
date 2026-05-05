@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-/* ── KAI PALETTE v1 — DO NO HARM / NANO BANANA PRO ───────────────────────── */
+/* ── KAI PALETTE v1: DO NO HARM / NANO BANANA PRO ───────────────────────── */
 :root {
-  --navy:      #060F1E;   /* darkest — body background */
+  --navy:      #060F1E;   /* darkest: body background */
   --navy-2:    #0A1628;   /* cards, panels */
   --navy-3:    #0C2452;   /* secondary panels, hover states */
   --deep-blue: #0B67BE;   /* primary action, buttons, bars */
-  --crimson:   #CE302C;   /* alerts, CTAs, timestamps — ONLY */
+  --crimson:   #CE302C;   /* alerts, CTAs, timestamps: ONLY */
   --light-blue:#A5D3E9;   /* secondary text, tags, borders */
   --glass-bg:  rgba(11,103,190,0.12);
   --glass-border: rgba(165,211,233,0.15);
